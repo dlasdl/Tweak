@@ -31,6 +31,10 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
+<<<<<<< HEAD
+=======
+import com.aosip.owlsnest.buttons.NavigationCategory;
+>>>>>>> 7f86806... Bring in hardware key action binding settings
 import com.aosip.owlsnest.buttons.PowermenuCategory;
 import com.aosip.owlsnest.buttons.VolumeCategory;
 import com.aosip.owlsnest.PagerSlidingTabStrip;
@@ -84,9 +88,15 @@ public class ButtonsHolder extends SettingsPreferenceFragment {
 
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
+<<<<<<< HEAD
             frags[0] = new PowermenuCategory();
             frags[1] = new VolumeCategory();
             frags[2] = new ButtonsCategory();
+=======
+            frags[0] = new NavigationCategory();
+            frags[1] = new PowermenuCategory();
+            frags[2] = new VolumeCategory();
+>>>>>>> 7f86806... Bring in hardware key action binding settings
         }
 
         @Override
@@ -108,6 +118,7 @@ public class ButtonsHolder extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
+                    getString(R.string.hardware_keys_category),
                     getString(R.string.powermenu_category),
                     getString(R.string.volume_category),
                     getString(R.string.button_category)};
